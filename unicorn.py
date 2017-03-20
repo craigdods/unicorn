@@ -189,6 +189,15 @@ python unicorn.py muahahaha.ps1 macro 500
 
 The last one will use a 500 character string instead of the default 380, resulting in less carriage returns in VBA.
 
+If you are deploying this against Office365/2016+ versions of Word you need to modify the first line of the output:
+
+From:
+Sub Auto_Open()
+
+To
+Sub AutoOpen()
+
+The name of the macro itself must also be "AutoOpen" instead of the legacy "Auto_Open" naming scheme
 [*******************************************************************************************************]
 	""")
 
